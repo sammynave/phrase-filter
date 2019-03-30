@@ -1,0 +1,25 @@
+{
+  "name": "swear-jar",
+  "version": "1.0.0",
+  "main": "dist/swear-jar.cjs.js",
+  "module": "dist/swear-jar.esm.js",
+  "browser": "dist/swear-jar.umd.js",
+  "devDependencies": {
+    "ava": "^1.4.1",
+    "benchmark": "^2.1.4",
+    "cli-table": "^0.3.1",
+    "rollup": "^1.0.0",
+    "rollup-plugin-commonjs": "^9.2.0",
+    "rollup-plugin-node-resolve": "^4.0.0"
+  },
+  "scripts": {
+    "bench": "yarn build && node benchmarks/index.js",
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "test": "ava",
+    "pretest": "npm run build"
+  },
+  "files": [
+    "dist"
+  ]
+}
