@@ -11,8 +11,8 @@ module.exports = benchmark('create', function CreateExps(suite) {
     clean('some text with a list of banned phrases');
   });
 
-  suite.add('call hasProfanity create(["a", "list", "of", "banned phrases"])', () => {
-    const { hasProfanity } = create(['a', 'list', 'of', 'banned phrases']);
-    hasProfanity('some text with a list of banned phrases');
+  suite.add('call hasPhrase create(["a", "list", "of", "banned phrases"])', () => {
+    const { hasPhrase } = create(['a', 'list', 'of', 'banned phrases']);
+    hasPhrase('some text with a list of banned phrases');
   });
 });

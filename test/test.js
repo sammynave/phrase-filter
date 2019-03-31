@@ -11,20 +11,20 @@ test('replace single word', t => {
   );
 });
 
-test('detect profanity', t => {
-  const { hasProfanity } = create(list);
+test('detect phrase', t => {
+  const { hasPhrase } = create(list);
   t.is(
-    hasProfanity('some text with foo'),
+    hasPhrase('some text with foo'),
     true
   );
 
   t.is(
-    hasProfanity('some text with foos'),
+    hasPhrase('some text with foos'),
     false
   );
 
   t.is(
-    hasProfanity('some text with foo BAR'),
+    hasPhrase('some text with foo BAR'),
     true
   );
 });

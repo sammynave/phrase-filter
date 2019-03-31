@@ -23,7 +23,7 @@ export function create(list) {
       return sortedList.reduce(censor, text);
     },
 
-    hasProfanity(text) {
+    hasPhrase(text) {
       const { detected } = sortedList.reduce(detect, { text, detected: false });
       return detected;
     }

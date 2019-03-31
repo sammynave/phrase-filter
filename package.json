@@ -16,6 +16,7 @@
     "bench": "yarn build && node benchmarks/index.js",
     "build": "rollup -c",
     "dev": "rollup -c -w",
+    "prepublishOnly": "yarn build",
     "test": "ava",
     "pretest": "npm run build"
   },
