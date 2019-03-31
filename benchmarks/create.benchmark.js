@@ -6,7 +6,13 @@ module.exports = benchmark('create', function CreateExps(suite) {
     create(['a', 'list', 'of', 'banned phrases']);
   });
 
-  suite.add('call create(["a", "list", "of", "banned phrases"])', () => {
-    const clean = create(['a', 'list', 'of', 'banned phrases']);
+  suite.add('call clean create(["a", "list", "of", "banned phrases"])', () => {
+    const { clean } = create(['a', 'list', 'of', 'banned phrases']);
+    clean('some text with a list of banned phrases');
+  });
+
+  suite.add('call hasProfanity create(["a", "list", "of", "banned phrases"])', () => {
+    const { hasProfanity } = create(['a', 'list', 'of', 'banned phrases']);
+    hasProfanity('some text with a list of banned phrases');
   });
 });

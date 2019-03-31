@@ -1,3 +1,12 @@
+const desc = (a, b) => b.length - a.length;
+
+export function detect({ text, detected}, phrase) {
+  return {
+    text,
+    detected: detected ? detected : match(phrase).test(text)
+  }
+};
+
 export function match(phrase) {
   return new RegExp(`\\b${phrase}\\b`, 'gi');
 };
@@ -7,11 +16,16 @@ export function censor(text, phrase) {
   return text.replace(match(phrase), asterisks);
 };
 
-const desc = (a, b) => b.length - a.length;
-
 export function create(list) {
   const sortedList = list.sort(desc);
-  return function(text) {
-    return sortedList.reduce(censor, text);
+  return {
+    clean(text) {
+      return sortedList.reduce(censor, text);
+    },
+
+    hasProfanity(text) {
+      const { detected } = sortedList.reduce(detect, { text, detected: false });
+      return detected;
+    }
   }
-}
+};

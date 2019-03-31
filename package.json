@@ -1,9 +1,9 @@
 {
-  "name": "swear-jar",
+  "name": "phrase-filter",
   "version": "1.0.0",
-  "main": "dist/swear-jar.cjs.js",
-  "module": "dist/swear-jar.esm.js",
-  "browser": "dist/swear-jar.umd.js",
+  "main": "dist/phrase-filter.cjs.js",
+  "module": "dist/phrase-filter.esm.js",
+  "browser": "dist/phrase-filter.umd.js",
   "devDependencies": {
     "ava": "^1.4.1",
     "benchmark": "^2.1.4",
@@ -21,5 +21,15 @@
   },
   "files": [
     "dist"
+  ],
+  "keywords": [
+    "filter",
+    "profanity",
+    "obscenity",
+    "swear",
+    "word",
+    "words",
+    "phrase",
+    "phrases"
   ]
 }

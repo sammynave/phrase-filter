@@ -1,8 +1,8 @@
-# swear-jar
+# phrase-filter
 
 
 ## Installation
-`yarn add -D swear-jar`
+`yarn add -D phrase-filter`
 
 
 ## License
