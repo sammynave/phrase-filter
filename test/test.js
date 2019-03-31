@@ -12,7 +12,7 @@ test('replace single word', t => {
 });
 
 test('detect profanity', t => {
-  const { hasProfanity, hasProfanity2, hasProfanity3 } = create(list);
+  const { hasProfanity } = create(list);
   t.is(
     hasProfanity('some text with foo'),
     true
