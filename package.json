@@ -5,12 +5,12 @@
   "module": "dist/phrase-filter.esm.js",
   "browser": "dist/phrase-filter.umd.js",
   "devDependencies": {
-    "ava": "^1.4.1",
+    "ava": "^2.0.0",
     "benchmark": "^2.1.4",
     "cli-table": "^0.3.1",
-    "rollup": "^1.0.0",
-    "rollup-plugin-commonjs": "^9.2.0",
-    "rollup-plugin-node-resolve": "^4.0.0"
+    "rollup": "^1.14.0",
+    "rollup-plugin-commonjs": "^10.0.0",
+    "rollup-plugin-node-resolve": "^5.0.0"
   },
   "scripts": {
     "bench": "yarn build && node benchmarks/index.js",
